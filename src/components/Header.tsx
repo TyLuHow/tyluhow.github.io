@@ -15,6 +15,7 @@ export default function Header() {
           <a href="#contact" className="hidden sm:inline-block text-sm bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded">Get in touch</a>
         </div>
       </nav>
+      <div className="gradient-line" />
     </header>
   )
 } 

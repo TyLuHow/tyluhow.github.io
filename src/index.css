@@ -8,6 +8,40 @@
   color-scheme: dark;
 }
 
+/* Subtle grid background for mild eccentricity (static, no animation) */
+.bg-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Notched card shape */
+.card-notch {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+/* Gradient divider line (used under header and headings) */
+.gradient-line {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.22), rgba(255,255,255,0));
+}
+
+/* Heading ornament: small rotated square (diamond) */
+.heading-ornament {
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.2));
+}
+
+/* Refined tag pills */
+.tag-pill {
+  border: 1px dashed rgba(255,255,255,0.24);
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  color: #e5e7eb; /* gray-200 */
+  background-color: rgba(255,255,255,0.04);
+}
+
 /* Flip card styles */
 .flip-card {
   perspective: 1000px;
