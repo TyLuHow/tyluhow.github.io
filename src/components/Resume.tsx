@@ -3,14 +3,17 @@ export default function Resume() {
     window.print()
   }
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12" id="resume-section">
+    <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold text-white">Resume</h2>
+        <div className="flex items-center gap-2">
+          <div className="heading-ornament" />
+          <h2 className="text-xl font-semibold text-white">Resume</h2>
+        </div>
         <button onClick={onDownload} className="text-sm bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded">
           Download PDF
         </button>
       </div>
-      <div className="mt-6 bg-surface/80 border border-white/10 rounded-lg p-6 text-gray-200 text-sm leading-6">
+      <div className="mt-6 bg-surface/80 border border-white/10 rounded-lg p-6 text-gray-200 text-sm leading-6 card-notch">
         <h3 className="text-lg font-semibold">TYLER LUBY HOWARD</h3>
         <div className="text-gray-300">tylerlubyhoward@gmail.com | linkedin.com/in/tyler-luby-howard | 720-636-4854</div>
         <h4 className="mt-4 font-semibold text-gray-100">SUMMARY</h4>
