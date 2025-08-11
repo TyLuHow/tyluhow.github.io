@@ -5,8 +5,8 @@ export default function Resume() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="heading-ornament" />
+        <div className="section-header">
+          <div className="bar" />
           <h2 className="text-xl font-semibold text-white">Resume</h2>
         </div>
         <button onClick={onDownload} className="text-sm btn-solid">

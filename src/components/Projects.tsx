@@ -6,8 +6,8 @@ export default function Projects() {
   const sorted: Project[] = [...projects]
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl">
-      <div className="flex items-center gap-2">
-        <div className="heading-ornament" />
+      <div className="section-header">
+        <div className="bar" />
         <h2 className="text-xl font-semibold text-white">Projects</h2>
       </div>
       <p className="mt-2 text-sm text-gray-400">Tap/click a card to flip for details.</p>

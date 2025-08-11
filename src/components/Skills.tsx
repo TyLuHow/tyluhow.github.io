@@ -3,8 +3,8 @@ import { skills } from '../data/skills'
 export default function Skills() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl">
-      <div className="flex items-center gap-2">
-        <div className="heading-ornament" />
+      <div className="section-header">
+        <div className="bar" />
         <h2 className="text-xl font-semibold text-white">Skills</h2>
       </div>
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

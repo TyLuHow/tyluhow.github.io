@@ -1,8 +1,8 @@
 export default function Contact() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl">
-      <div className="flex items-center gap-2">
-        <div className="heading-ornament" />
+      <div className="section-header">
+        <div className="bar" />
         <h2 className="text-xl font-semibold text-white">Contact</h2>
       </div>
       <p className="mt-2 text-gray-300">I welcome collaborations and opportunities.</p>
