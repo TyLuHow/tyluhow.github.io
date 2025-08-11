@@ -40,7 +40,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               <span key={t} className="text-xs tag-pill">{t}</span>
             ))}
           </div>
-          <button className="mt-4 self-start text-sm text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded">
+          <button className="mt-4 self-start text-sm btn-solid">
             View details
           </button>
         </div>
@@ -89,7 +89,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               </div>
             )}
           </div>
-          <button className="mt-4 text-sm text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded">
+          <button className="mt-4 text-sm btn-solid">
             Back
           </button>
         </div>

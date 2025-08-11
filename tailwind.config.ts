@@ -14,7 +14,8 @@ export default {
       colors: {
         background: '#0a0a0a',
         surface: '#111111',
-        muted: '#1a1a1a'
+        muted: '#1a1a1a',
+        accent: '#00A3FF'
       }
     },
   },

@@ -12,7 +12,7 @@ export default function Header() {
         </ul>
         <div className="flex items-center gap-3">
           <a href="https://www.linkedin.com/in/tyler-luby-howard" target="_blank" rel="noreferrer" className="text-sm text-gray-300 hover:text-white">LinkedIn</a>
-          <a href="#contact" className="hidden sm:inline-block text-sm bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded">Get in touch</a>
+          <a href="#contact" className="hidden sm:inline-block text-sm btn-solid">Get in touch</a>
         </div>
       </nav>
       <div className="gradient-line" />

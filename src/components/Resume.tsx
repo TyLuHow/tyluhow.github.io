@@ -9,7 +9,7 @@ export default function Resume() {
           <div className="heading-ornament" />
           <h2 className="text-xl font-semibold text-white">Resume</h2>
         </div>
-        <button onClick={onDownload} className="text-sm bg-white/10 hover:bg-white/20 text-white px-3 py-1.5 rounded">
+        <button onClick={onDownload} className="text-sm btn-solid">
           Download PDF
         </button>
       </div>
