@@ -3,7 +3,7 @@ export default function Resume() {
     window.print()
   }
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
+    <div className="mx-auto max-w-7xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
       <div className="flex items-center justify-between">
         <div className="section-header">
           <div className="bar" />
@@ -62,13 +62,6 @@ export default function Resume() {
             <li>Developed a risk analysis model in Power BI assessing 4,000+ safety-related data points across warehouse activities.</li>
             <li>Achieved a 40% reduction in monthly incidents post-deployment by aligning insights with manager-level intervention.</li>
             <li>Built PowerApps inspection and certification apps; automated daily summaries via Power Automate.</li>
-          </ul>
-        </div>
-        <div className="mt-2">
-          <p className="font-medium">Corberosa Coffee, San Luis Obispo, CA — Business Expansion Project Lead – SOC (Jan 2024 – Jun 2024)</p>
-          <ul className="list-disc list-inside text-gray-300">
-            <li>Simulated canning system in AnyLogic; delivered ergonomic layouts and throughput projections.</li>
-            <li>Built traceability tools for FDA/HACCP compliance and modeled breakeven across staffing configurations.</li>
           </ul>
         </div>
         <h4 className="mt-4 font-semibold text-gray-100">TECHNICAL SKILLS</h4>

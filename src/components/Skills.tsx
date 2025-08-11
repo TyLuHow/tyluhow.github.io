@@ -2,7 +2,7 @@ import { skills } from '../data/skills'
 
 export default function Skills() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl">
+    <div className="mx-auto max-w-7xl px-4 py-12 bg-grid rounded-xl">
       <div className="section-header">
         <div className="bar" />
         <h2 className="text-xl font-semibold text-white">Skills</h2>
