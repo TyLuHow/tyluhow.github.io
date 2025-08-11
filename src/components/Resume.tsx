@@ -3,7 +3,7 @@ export default function Resume() {
     window.print()
   }
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
+    <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
       <div className="flex items-center justify-between">
         <div className="section-header">
           <div className="bar" />
