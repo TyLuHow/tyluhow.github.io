@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="flip-card h-full" onClick={() => setFlipped(v => !v)}>
       <div className={`flip-inner h-full ${flipped ? 'is-flipped' : ''}`}>
-        <div className="flip-front bg-surface/80 border border-white/10 rounded-lg p-5 flex flex-col card-notch">
+        <div className="flip-front bg-surface/80 border border-white/20 rounded-lg p-5 flex flex-col">
           <div className="flex items-start justify-between">
             <div className="text-xs uppercase tracking-wide text-gray-400">{project.category}</div>
             {project.logo && (
@@ -44,7 +44,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             View details
           </button>
         </div>
-        <div className="flip-back bg-surface/90 border border-white/10 rounded-lg p-5 overflow-y-auto card-notch">
+        <div className="flip-back bg-surface/90 border border-white/20 rounded-lg p-5 overflow-y-auto">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-white">{project.title}</h3>
             {project.logo && (

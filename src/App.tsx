@@ -6,14 +6,12 @@ import Skills from './components/Skills'
 import Resume from './components/Resume'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import SideBanner from './components/SideBanner'
 
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-gray-200 font-sans">
       <Header />
-      <SideBanner />
-      <main className="lg:ml-14">
+      <main>
         <Hero />
         <section id="about" className="scroll-mt-20"><About /></section>
         <section id="projects" className="scroll-mt-20"><Projects /></section>

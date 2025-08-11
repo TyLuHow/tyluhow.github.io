@@ -3,7 +3,7 @@ export default function Resume() {
     window.print()
   }
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
+    <div className="mx-auto max-w-5xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
       <div className="flex items-center justify-between">
         <div className="section-header">
           <div className="bar" />
@@ -13,7 +13,7 @@ export default function Resume() {
           Download PDF
         </button>
       </div>
-      <div className="mt-6 bg-surface/80 border border-white/10 rounded-lg p-6 text-gray-200 text-sm leading-6 card-notch">
+      <div className="mt-6 bg-surface/80 border border-white/20 rounded-lg p-6 text-gray-200 text-sm leading-6">
         <h3 className="text-lg font-semibold">TYLER LUBY HOWARD</h3>
         <div className="text-gray-300">tylerlubyhoward@gmail.com | linkedin.com/in/tyler-luby-howard | 720-636-4854</div>
         <h4 className="mt-4 font-semibold text-gray-100">SUMMARY</h4>
