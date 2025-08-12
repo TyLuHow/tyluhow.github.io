@@ -1,7 +1,12 @@
+import { useState } from 'react'
+
 export default function Resume() {
   const onDownload = () => {
     window.print()
   }
+  const [showCoursework, setShowCoursework] = useState(false)
+  const [showMoreExp, setShowMoreExp] = useState(false)
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 bg-grid rounded-xl" id="resume-section">
       <div className="flex items-center justify-between">
@@ -13,59 +18,136 @@ export default function Resume() {
           Download PDF
         </button>
       </div>
+
       <div className="mt-6 bg-surface/80 border border-white/20 rounded-lg p-6 text-gray-200 text-sm leading-6">
-        <h3 className="text-lg font-semibold">TYLER LUBY HOWARD</h3>
-        <div className="text-gray-300">tylerlubyhoward@gmail.com | linkedin.com/in/tyler-luby-howard | 720-636-4854</div>
-        <h4 className="mt-4 font-semibold text-gray-100">SUMMARY</h4>
-        <p>
-          Systems-minded industrial engineer with a passion for building solutions in uncharted territory, transforming fragmented workflows into integrated, scalable systems. Skilled in process automation and systems integration to accelerate execution and decision-making across technical and business domains, especially in high-ambiguity environments where adaptability matters.
-        </p>
-        <h4 className="mt-4 font-semibold text-gray-100">EDUCATION</h4>
-        <p>BS - Industrial Engineering, California Polytechnic State University — December 2025</p>
-        <p className="text-gray-400">Relevant Coursework: Value Chain Analysis, Applications of Enterprise Analytics, Supply Chain & Logistics Management, Process Improvement Fundamentals, Systems Engineering, Data Management & System Design, Operations Research I & II, Simulation, Financial Decision Making for Engineers, Human Factors Engineering, Quality Engineering</p>
-        <h4 className="mt-4 font-semibold text-gray-100">PROFESSIONAL EXPERIENCE</h4>
+        <h3 className="text-lg font-semibold">Tyler Luby Howard</h3>
+        <div className="text-gray-300 space-x-2">
+          <a href="mailto:tylerlubyhoward@gmail.com" className="underline">tylerlubyhoward@gmail.com</a>
+          <span>•</span>
+          <a href="tel:+17206365484" className="underline">(720) 636-5484</a>
+          <span>•</span>
+          <span>Parker, CO / San Luis Obispo, CA</span>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/tyler-luby-howard" target="_blank" rel="noreferrer" className="underline">linkedin.com/in/tyler-luby-howard</a>
+        </div>
+
+        <h4 className="mt-6 font-semibold text-gray-100">Education</h4>
+        <p>California Polytechnic State University, San Luis Obispo — Bachelor of Science in Industrial Engineering (Expected December 2025)</p>
+
+        <h4 className="mt-6 font-semibold text-gray-100">Certifications</h4>
+        <ul className="list-disc list-inside text-gray-300 space-y-1">
+          <li>NAUI Worldwide, Open Water SCUBA Diver — Issued April 2025</li>
+          <li>CSCMP Supply Chain Foundations: Demand Planning — March 2025</li>
+          <li>CSCMP Supply Chain Foundations: Procurement — March 2025</li>
+          <li>CSCMP Supply Chain Foundations: Essentials — March 2025</li>
+          <li>CSCMP Supply Chain Foundations: Warehousing Operations — March 2025</li>
+        </ul>
+
+        <h4 className="mt-6 font-semibold text-gray-100">Relevant Coursework</h4>
+        {!showCoursework && (
+          <p className="text-gray-300">Key courses: OR I & II, Simulation & Queuing, Data Management & System Design, Value Chain Analysis, Supply Chain & Logistics, Quality Engineering, Statistical Computing in R. <button className="underline" onClick={() => setShowCoursework(true)}>Show all</button></p>
+        )}
+        {showCoursework && (
+          <p className="text-gray-300">
+            IME 212, IME 312, IME 305, IME 301, IME 326, STAT 331, STAT 321, CSC 231, IME 420, IME 410, IME 460, IME 417, IME 408, IME 141, IME 144, IME 156, IME 223, IME 430, IME 443, PHYS 132, PHYS 133, CHEM 124, CHEM 125, MATE 210, MATE 215, MATH 143, MATH 241, MATH 244, CE 204, ME 211, BIO 213, BMED 213, EE 201, EE 251, ENVE 111, IME 315, ENGL 134, ENGL 147, PHIL 126, PHIL 231, PHIL 339, COMS 101, HIST 202, ES 252, LA 212, PSY 201, MU 101, KINE 152.
+            <button className="ml-2 underline" onClick={() => setShowCoursework(false)}>Hide</button>
+          </p>
+        )}
+
+        <h4 className="mt-6 font-semibold text-gray-100">Technical Proficiencies (selected)</h4>
+        <ul className="list-disc list-inside text-gray-300 space-y-1">
+          <li>Full-Stack & Web: TypeScript/JavaScript, HTML5/CSS3, PWAs, Node.js, Vercel Functions, Supabase, CI/CD (GitHub Actions)</li>
+          <li>Data & Analytics: Python (pandas, numpy, matplotlib, scipy, folium), R (tidyverse), SQL (PostgreSQL, MySQL, T-SQL), Power BI, PowerApps, Power Automate</li>
+          <li>Optimization & Simulation: OR (LP/VRP), AnyLogic, Monte Carlo, forecasting models</li>
+          <li>Integration & APIs: REST, OAuth 2.0, webhooks, GraphQL design, Zod validation, MCP server architecture</li>
+          <li>Manufacturing/Industrial: PLC/SCADA/HMI exposure, quality systems, SPC, ergonomics, facility layout</li>
+          <li>Security/DevOps: CI/CD, monitoring, error handling, CSP, type-safe API development</li>
+        </ul>
+
+        <h4 className="mt-6 font-semibold text-gray-100">Professional Experience</h4>
         <div className="mt-2">
-          <p className="font-medium">Rivian Automotive Inc., Plymouth, MI — Data Analyst Intern, Supply Chain Risk (Jun 2025 – Sep 2025)</p>
-          <ul className="list-disc list-inside text-gray-300">
-            <li>Developed production risk dashboards in Hex integrating SAP, Basecamp, OTM, and Exiger into a unified monitoring system.</li>
-            <li>Built internal tooling to automate supplier info aggregation, capacity analysis, and escalation tracking.</li>
-            <li>Enhanced ETL pipelines and status tracking to improve cross-departmental collaboration for risk identification.</li>
+          <p className="font-medium">Rivian Automotive Inc. — Supply Chain Risk Intern (Jun 2025 – Sep 2025)</p>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Built proactive Supply Chain Risk Mitigation dashboard; improved early identification of critical supplier issues.</li>
+            <li>Implemented predictive analytics in Databricks (80–90% accuracy) for supplier performance trends and risk monitoring.</li>
+            <li>Automated ETL pipelines; reduced data processing time ~30–40% weekly; increased adoption via interactive Hex dashboards.</li>
+            <li>Contributed to $1–3M estimated cost avoidance by enabling faster disruption resolution and early interventions.</li>
           </ul>
         </div>
         <div className="mt-2">
-          <p className="font-medium">Tesla Motors, Fremont, CA (Remote) — Industrial Engineering Project Analyst – SOC (Jan 2025 – Jun 2025)</p>
-          <ul className="list-disc list-inside text-gray-300">
-            <li>Built PowerApps valet system tracking 400 vehicles/day with automated lot visualization and dispatch logic.</li>
-            <li>Designed Power BI dashboards to improve charger usage, move counts, and labor allocation.</li>
-            <li>Authored CAPEX/OPEX model projecting $35,700 quarterly labor savings (369.9% ROI) with 50-day breakeven.</li>
+          <p className="font-medium">RFNR Accounting — Senior Project (Apr 2025 – Present)</p>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Architected PostgreSQL/Supabase data hub integrating 10+ systems; designed GraphQL/REST triggers and webhook flows.</li>
+            <li>Mapped 60+ failure modes into an Integration Matrix; proposed phased rollout improving admin overhead and onboarding speed.</li>
+            <li>Planned middleware for Practice CS ↔ Monday.com and ShareFile ↔ FileCabinet; SOC2-aligned security.</li>
           </ul>
         </div>
         <div className="mt-2">
-          <p className="font-medium">RFNR Accounting, LLP, Los Angeles, CA (Remote) — Enterprise Systems Integration Lead – Senior Project (Jan 2025 – Dec 2025)</p>
-          <ul className="list-disc list-inside text-gray-300">
-            <li>Constructed a PostgreSQL backend integrating 10+ finance, tax, and workflow systems via REST APIs, ODBC, and RPA.</li>
-            <li>Replaced manual routing chains with automated escalation logic across 60+ integration failure points.</li>
-            <li>Built an MCP-backed knowledge graph using RAG principles linking firm data to source-of-truth documentation.</li>
+          <p className="font-medium">RoviSys — Systems Co-Op (Sep 2024 – Dec 2024)</p>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Authored O&M manuals across nuclear/water/utilities/manufacturing for post-handover reliability and compliance.</li>
+            <li>Documented SLC 500 → ControlLogix migrations; reverse-engineered Wonderware; prepared legacy VM strategies.</li>
           </ul>
         </div>
         <div className="mt-2">
-          <p className="font-medium">RoviSys, Thousand Oaks, CA — Control Systems Co-Op (Sep 2024 – Dec 2024)</p>
-          <ul className="list-disc list-inside text-gray-300">
-            <li>Authored O&M manuals to support long-term maintenance and QA audit-readiness.</li>
-            <li>Migrated legacy SLC 500 into ControlLogix platforms, validating IO mappings and ladder logic.</li>
-            <li>Delivered risk mitigation strategy to nuclear facility stakeholders, outlining legacy VM safeguards.</li>
+          <p className="font-medium">Gensco — Operations Intern (Jun 2024 – Sep 2024)</p>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Built Power BI safety dashboards (4,000+ observations); achieved ~40% monthly incident drop post-deployment.</li>
+            <li>Developed PowerApps inspection tools with 100% supervisor adoption in one week; added certification tracking modules.</li>
           </ul>
         </div>
         <div className="mt-2">
-          <p className="font-medium">Gensco, Tacoma, WA — Data Analyst Intern, Safety (Jun 2024 – Sep 2024)</p>
-          <ul className="list-disc list-inside text-gray-300">
-            <li>Developed a risk analysis model in Power BI assessing 4,000+ safety-related data points across warehouse activities.</li>
-            <li>Achieved a 40% reduction in monthly incidents post-deployment by aligning insights with manager-level intervention.</li>
-            <li>Built PowerApps inspection and certification apps; automated daily summaries via Power Automate.</li>
+          <p className="font-medium">Tesla — Systems Optimization Club Project (Jan 2025 – Jun 2025)</p>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Digitized valet workflow with PowerApps/SharePoint/Power BI tracking 300–400 vehicles/day.</li>
+            <li>Modeled labor savings of $35,700/quarter; breakeven ~50 days; reduced wait time from 90 to 35 minutes.</li>
           </ul>
         </div>
-        <h4 className="mt-4 font-semibold text-gray-100">TECHNICAL SKILLS</h4>
-        <p className="text-gray-300">Process optimization, systems integration, Python, R, SQL, React, Power BI, PowerApps, ETL pipelines, forecasting models, statistical modeling, simulation, and CI/CD.</p>
+        {!showMoreExp && (
+          <button className="mt-3 underline" onClick={() => setShowMoreExp(true)}>Show more experience</button>
+        )}
+        {showMoreExp && (
+          <div className="mt-2 space-y-4">
+            <div>
+              <p className="font-medium">Corberosa Coffee — Systems Optimization Project Lead (Jan 2024 – Jun 2024)</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                <li>Simulation-driven optimization for cold brew canning line; equipment layout and HACCP-aligned workflows.</li>
+                <li>Breakeven projection 13–18 months; 80% productivity improvement in one-operator scenario.</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium">Inspired Flight — SOC Member (Jan 2023 – Jun 2023)</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                <li>Redesigned UAV propeller testing center; SolidWorks fixtures and layout improvements for safer, parallel validation.</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium">Hayward Building Systems — Project Lead (Jan 2023 – Mar 2023)</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                <li>Time studies and bottleneck analysis; WIP staging with FIFO tracking; 5S implementation.</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium">Cal Poly Environmental Engineering Dept. — WESTT Research Team (Sep 2022 – Dec 2023)</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                <li>Bioremediation algae experiments; lab protocol adherence; experiment logging and QA support.</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium">Uber/DoorDash — Delivery Driver (Jun 2021 – Present)</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                <li>3,000+ deliveries, 4.98/5 rating; route heuristics to maximize hourly payout and reliability.</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium">Freddy’s Frozen Custard & Steakburgers — Full Shift Supervisor (Jun 2018 – Jun 2021)</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                <li>Promoted to shift lead; trained 9+ employees; coordinated throughput under peak conditions.</li>
+              </ul>
+            </div>
+            <button className="underline" onClick={() => setShowMoreExp(false)}>Hide</button>
+          </div>
+        )}
       </div>
     </div>
   )
