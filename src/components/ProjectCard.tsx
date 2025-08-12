@@ -3,14 +3,16 @@ import { useState } from 'react'
 export type Project = {
   id: string
   title: string
-  category: 'Internship' | 'Academic' | 'Club Leadership' | 'Freelance' | 'Research'
+  company?: string
+  category: 'Internship' | 'Academic' | 'Club Leadership' | 'Freelance' | 'Research' | 'Senior Project'
   summary: string
   tech: string[]
   problem: string
   solution: string
   implementation: string[]
   outcomes: string[]
-  media?: { label: string; url: string }[]
+  highlights?: string[]
+  media?: { label: string; url: string; type?: 'link' | 'pdf' }[]
   logo?: { src: string; alt: string }
 }
 
@@ -34,7 +36,15 @@ export default function ProjectCard({ project }: { project: Project }) {
             )}
           </div>
           <h3 className="mt-2 text-lg font-semibold text-white">{project.title}</h3>
+          {project.company && (
+            <div className="text-sm text-gray-400">{project.company}</div>
+          )}
           <p className="mt-2 text-gray-300 flex-1">{project.summary}</p>
+          {project.highlights && project.highlights.length > 0 && (
+            <ul className="mt-3 text-gray-200 text-sm space-y-1">
+              {project.highlights.map((h, idx) => (<li key={idx}>• {h}</li>))}
+            </ul>
+          )}
           <div className="mt-3 flex flex-wrap gap-2">
             {project.tech.map(t => (
               <span key={t} className="text-xs tag-pill">{t}</span>
@@ -46,7 +56,12 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="flip-back bg-surface/90 border border-white/20 rounded-lg p-5 overflow-y-auto">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+            <div>
+              <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+              {project.company && (
+                <div className="text-sm text-gray-400">{project.company}</div>
+              )}
+            </div>
             {project.logo && (
               <img
                 src={project.logo.src}
@@ -81,11 +96,17 @@ export default function ProjectCard({ project }: { project: Project }) {
             {project.media && project.media.length > 0 && (
               <div>
                 <div className="font-medium text-gray-200">Media</div>
-                <ul className="list-disc list-inside space-y-1">
+                <div className="space-y-3">
                   {project.media.map((m, idx) => (
-                    <li key={idx}><a href={m.url} target="_blank" rel="noreferrer" className="underline hover:text-white">{m.label}</a></li>
+                    <div key={idx} className="space-y-2">
+                      {m.type === 'pdf' ? (
+                        <iframe src={m.url} title={m.label} className="w-full h-64 rounded border border-white/10" />
+                      ) : (
+                        <a href={m.url} target="_blank" rel="noreferrer" className="underline hover:text-white">{m.label}</a>
+                      )}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
           </div>
