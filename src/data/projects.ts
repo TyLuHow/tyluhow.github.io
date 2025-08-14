@@ -6,11 +6,12 @@ export const projects: Project[] = [
     id: 'rivian-supply-chain-risk',
     title: 'Supply Chain Risk Data Analysis',
     company: 'Rivian',
+    date: 'Jun 2025 – Sep 2025',
     category: 'Internship',
     summary: 'Probabilistic risk modeling and real-time dashboards across multi-tier supplier network.',
     tech: [
-      'Python', 'Databricks', 'Tableau', 'SAP HANA', 'Hex',
-      'Predictive Analytics', 'Monte Carlo Simulation', 'ETL Pipelines', 'Risk Scoring', 'Alerting'
+      'Python', 'Databricks', 'Hex', 'SAP HANA', 'Predictive Analytics',
+      'Data Modeling', 'ETL Pipelines', 'Risk Scoring', 'Dashboard Design', 'GIS Mapping'
     ],
     problem: 'Limited visibility into disruption risks across a complex multi-tier supplier network.',
     solution: 'Built predictive risk models, network analysis, and live dashboards to enable proactive mitigation.',
@@ -18,7 +19,7 @@ export const projects: Project[] = [
       'Databricks pipelines for supplier performance signals',
       'ERP and external risk feed integration; GIS risk mapping',
       'Graph analysis to identify critical-path dependencies',
-      'Automated alerting and scenario planning for disruption response'
+      'Scenario planning for disruption response'
     ],
     outcomes: [
       '85% coverage of Tier 1–3 suppliers; 72-hour early warning capability',
@@ -29,11 +30,12 @@ export const projects: Project[] = [
     id: 'gensco-safety-analytics',
     title: 'Warehouse Safety Data Analysis',
     company: 'Gensco',
+    date: 'Jun 2024 – Sep 2024',
     category: 'Internship',
     summary: 'Predictive safety analytics with unified data model and interactive Power BI dashboards.',
     tech: [
       'Power BI', 'DAX', 'PowerApps', 'Power Automate', 'T-SQL',
-      'Python', 'M Code', 'Data Modeling', 'Validation Rules', 'KPI Design'
+      'Python', 'M Code', 'Data Modeling', 'Data Quality Rules', 'KPI Design'
     ],
     problem: 'Manual incident tracking across 5 departments with no predictive capabilities or unified reporting.',
     solution: 'Integrated multi-source safety data and built predictive analytics with interactive dashboards and alerts.',
@@ -41,7 +43,7 @@ export const projects: Project[] = [
       'Unified model across incidents, employees, equipment, and environment',
       'Anomaly detection and statistical testing (ANOVA, regression, chi-squared)',
       'Stored procedures for automated refresh and cleansing',
-      'Interactive dashboards with real-time alerts'
+      'Interactive dashboards with real-time insights'
     ],
     outcomes: [
       '40% reduction in incidents; 65% faster response time',
@@ -53,17 +55,18 @@ export const projects: Project[] = [
     id: 'rovisys-control-systems',
     title: 'Control Systems Integration',
     company: 'RoviSys',
+    date: 'Sep 2024 – Dec 2024',
     category: 'Internship',
     summary: 'Control systems integration with alarm management, historian, and reporting for manufacturing.',
     tech: [
       'Allen-Bradley ControlLogix', 'Ladder Logic', 'HMI Development', 'FactoryTalk View', 'EtherNet/IP',
-      'Alarm Management (ISA-18.2)', 'Historian Integration', 'Commissioning', 'Network Config', 'Technical Documentation'
+      'Alarm Management (ISA-18.2)', 'Commissioning', 'Network Config', 'Tech Writing', 'Troubleshooting'
     ],
     problem: 'Need for standardized, reliable control systems with safety and compliance across sites.',
     solution: 'Designed alarm philosophy, P&ID-based HMI, historian, and automated reporting.',
     implementation: [
       'ControlLogix and GuardLogix safety PLCs',
-      'Historian configuration and compliance reporting',
+      'Compliance reporting and historian configuration',
       'Managed switching and fiber backbone configuration',
       'Reusable templates and troubleshooting guides'
     ],
@@ -78,18 +81,19 @@ export const projects: Project[] = [
     id: 'rfnr-data-warehouse',
     title: 'Multi-Client Database Unification',
     company: 'RFNR Accounting',
+    date: 'Jan 2025 – Dec 2025',
     category: 'Senior Project',
     summary: 'Unified data warehouse and API layer across 50+ accounting clients with automated reconciliation.',
     tech: [
-      'PostgreSQL', 'Supabase', 'REST APIs', 'RBAC', 'ETL',
-      'Data Warehouse', 'Reconciliation Engine', 'Audit Trail', 'Backups', 'Exception Handling'
+      'PostgreSQL', 'Supabase', 'REST APIs', 'Data Warehouse', 'Audit Trail',
+      'Schema Design', 'Data Orchestration', 'Encryption', 'Portal Integration', 'Monitoring'
     ],
     problem: 'Disparate client systems and formats led to inconsistent reporting and manual reconciliation.',
     solution: 'Designed a star-schema warehouse, ETL pipelines, and reconciliation engine with role-based security.',
     implementation: [
       'ETL for QuickBooks, Xero, Sage, and proprietary formats',
       'Dimensional modeling (star schema), change tracking',
-      'Nightly sync and backup strategy',
+      'Nightly sync and guardrails',
       'Portal APIs with role-based access and encryption'
     ],
     outcomes: [
@@ -108,6 +112,7 @@ export const projects: Project[] = [
     id: 'soc-tesla-ops',
     title: 'Tesla Valet Operations Optimization',
     company: 'SOC — Analyst',
+    date: 'Jan 2025 – Jun 2025',
     category: 'Club Leadership',
     summary: 'SOC project improving valet operations using low-code apps, dashboards, and process redesign.',
     tech: [
@@ -134,6 +139,7 @@ export const projects: Project[] = [
     id: 'corberosa-cold-brew',
     title: 'Production Line Design',
     company: 'SOC — Project Lead (Corberosa Coffee)',
+    date: 'Jan 2024 – Jun 2024',
     category: 'Club Leadership',
     summary: 'Scaled cold brew production with process design, simulation, and financial modeling.',
     tech: [
@@ -158,18 +164,19 @@ export const projects: Project[] = [
     id: 'inspired-flight',
     title: 'Manufacturing Systems Enhancement',
     company: 'SOC — Member (Inspired Flight)',
+    date: 'Jan 2023 – Jun 2023',
     category: 'Club Leadership',
     summary: 'Production efficiency and quality system improvements for scaling from prototype to volume.',
     tech: [
       'Quality Management System', 'Test Protocols', 'Process Standardization', 'Fixture Design', 'Layout Optimization',
-      'Documentation', 'Safety Improvements', 'Readiness for Scale', 'Vendor Assessment', 'Training Materials'
+      'Documentation', 'Safety Improvements', 'Readiness for Scale', 'Training Materials', 'Continuous Improvement'
     ],
     problem: 'Scaling from prototype to volume production under quality and supply constraints.',
     solution: 'Requirements, modular system design, quality framework, and supply risk assessment.',
     implementation: [
       'Work instructions and quality checkpoints',
       'Automated testing procedures for flight systems',
-      'Vendor qualification and risk assessment'
+      'Team training materials'
     ],
     outcomes: [
       'Improved process consistency and readiness for scale'
@@ -181,6 +188,7 @@ export const projects: Project[] = [
     id: 'hayward-lumber',
     title: 'Hayward Lumber: Operations Analysis',
     company: 'Cal Poly — IME 223',
+    date: 'Jan 2023 – Mar 2023',
     category: 'Academic',
     summary: 'Academic project analyzing operations constraints and improvement opportunities.',
     tech: [
@@ -201,6 +209,7 @@ export const projects: Project[] = [
     id: 'netflix-value-chain',
     title: 'Netflix: A Value Chain Analysis',
     company: 'Cal Poly — IME 460',
+    date: 'Apr 2024 – Jun 2024',
     category: 'Academic',
     summary: 'Strategic and technical analysis of Netflix including ML personalization and cloud architecture.',
     tech: [
@@ -225,16 +234,17 @@ export const projects: Project[] = [
     id: 'biodiversity-analysis',
     title: 'National Parks Biodiversity Analysis',
     company: 'Cal Poly — IME 212',
+    date: 'May 2025',
     category: 'Academic',
     summary: 'Advanced Python analytics and interactive visualization of biodiversity datasets.',
     tech: [
       'Python', 'pandas', 'Data Cleaning', 'Geospatial Analysis', 'Folium',
-      'Interactive Dashboards', 'ANOVA', 'Regression', 'Effect Size', 'Visualization'
+      'Interactive Dashboards', 'ANOVA', 'Regression', 'Visualization', 'Tableau'
     ],
     problem: 'Derive insights from 50k+ species records to understand diversity patterns across parks.',
     solution: 'Built statistical models, interactive maps, and dashboards to explore biodiversity signals.',
     implementation: [
-      'ANOVA, regression, correlation, and effect size analysis',
+      'ANOVA, regression, correlation, and visualization',
       'Interactive folium maps and dashboards',
       'Vectorized pipelines and robust error handling'
     ],
@@ -246,6 +256,7 @@ export const projects: Project[] = [
     id: 'fungi-architecture',
     title: 'Fungi in Functional and Aesthetic Architecture',
     company: 'Cal Poly',
+    date: 'May 2024',
     category: 'Academic',
     summary: 'Interdisciplinary research on mycelium-based materials and sustainable design.',
     tech: [
@@ -272,18 +283,19 @@ export const projects: Project[] = [
     id: 'journeyblazers-linkedin',
     title: 'LinkedIn Content Strategy & Growth',
     company: 'JourneyBlazers',
+    date: 'Oct 2023 – Dec 2023',
     category: 'Internship',
     summary: 'Data-driven content strategy using engagement prediction and attribution.',
     tech: [
       'Social Analytics', 'Content Strategy', 'A/B Testing', 'Engagement Modeling', 'Salesforce Integration',
-      'Attribution Modeling', 'Time Series Analysis', 'Dashboarding', 'Benchmarking', 'Audience Segmentation'
+      'Dashboarding', 'Audience Segmentation', 'Campaign Design', 'KPI Tracking', 'Reporting'
     ],
     problem: 'Limited social presence hindered lead generation and brand awareness.',
     solution: 'Built analytics pipeline, A/B testing, and targeted content strategies.',
     implementation: [
       'Engagement prediction model and timing analysis',
       'Competitor benchmarking and social listening',
-      'Attribution modeling from social to pipeline'
+      'Attribution connections from social to pipeline'
     ],
     outcomes: [
       '43% follower growth in 70 days; 8.2% avg engagement; +35% social-sourced leads'
@@ -295,6 +307,7 @@ export const projects: Project[] = [
     id: 'westt-research',
     title: 'WESTT: Aerospace Systems Study',
     company: 'Cal Poly — WESTT',
+    date: 'Sep 2022 – Dec 2023',
     category: 'Research',
     summary: 'Research initiative exploring aerospace systems and testing methodologies.',
     tech: [

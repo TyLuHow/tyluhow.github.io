@@ -4,6 +4,7 @@ export type Project = {
   id: string
   title: string
   company?: string
+  date?: string
   category: 'Internship' | 'Academic' | 'Club Leadership' | 'Freelance' | 'Research' | 'Senior Project'
   summary: string
   tech: string[]
@@ -39,6 +40,9 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.company && (
             <div className="text-sm text-gray-400">{project.company}</div>
           )}
+          {project.date && (
+            <div className="text-xs text-gray-500">{project.date}</div>
+          )}
           <p className="mt-2 text-gray-300 flex-1">{project.summary}</p>
           {project.highlights && project.highlights.length > 0 && (
             <ul className="mt-3 text-gray-200 text-sm space-y-1">
@@ -60,6 +64,9 @@ export default function ProjectCard({ project }: { project: Project }) {
               <h3 className="text-lg font-semibold text-white">{project.title}</h3>
               {project.company && (
                 <div className="text-sm text-gray-400">{project.company}</div>
+              )}
+              {project.date && (
+                <div className="text-xs text-gray-500">{project.date}</div>
               )}
             </div>
             {project.logo && (
