@@ -6,7 +6,7 @@ export default function About() {
         <h2 className="text-xl font-semibold text-white">About</h2>
       </div>
       <p className="mt-4 text-gray-300 leading-7 text-base sm:text-lg">
-        I’m a systems-minded industrial engineer with a passion for building solutions in uncharted territory. I specialize in transforming fragmented workflows into integrated, scalable systems. My work spans process automation, systems integration, and cross-domain optimization, with a particular focus on high-ambiguity environments requiring adaptive execution. My experience includes supply chain risk mitigation at Rivian, control system modernization at RoviSys, financial operations optimization at Tesla, and API-integrated knowledge graph systems for accounting firms. I merge business rationale with technical precision, building tools that accelerate clarity, cohesion, and decision-making across complex organizational systems.
+        Systems-minded industrial engineer with a passion for building solutions in uncharted territory, transforming fragmented workflows into integrated, scalable systems. Skilled in process automation and systems integration to accelerate execution and decision-making across technical and business domains, especially in high-ambiguity environments where adaptability matters.
       </p>
     </div>
   )
