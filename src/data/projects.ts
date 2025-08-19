@@ -11,7 +11,7 @@ export const projects: Project[] = [
     summary: 'Probabilistic risk modeling and real-time dashboards across multi-tier supplier network.',
     tech: [
       'Python', 'Databricks', 'Hex', 'SAP HANA', 'Predictive Analytics',
-      'Data Modeling', 'ETL Pipelines', 'Risk Scoring', 'Dashboard Design', 'GIS Mapping'
+      'MCP Integration', 'ETL Pipelines', 'Risk Scoring', 'Dashboard Design', 'Cursor'
     ],
     problem: 'Limited visibility into disruption risks across a complex multi-tier supplier network.',
     solution: 'Built predictive risk models, network analysis, and live dashboards to enable proactive mitigation.',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     summary: 'Predictive safety analytics with unified data model and interactive Power BI dashboards.',
     tech: [
       'Power BI', 'DAX', 'PowerApps', 'Power Automate', 'T-SQL',
-      'Python', 'M Code', 'Data Modeling', 'Data Quality Rules', 'KPI Design'
+      'Python', 'Power Query', 'Data Governance', 'KPI Design', 'Report Design'
     ],
     problem: 'Manual incident tracking across 5 departments with no predictive capabilities or unified reporting.',
     solution: 'Integrated multi-source safety data and built predictive analytics with interactive dashboards and alerts.',
@@ -85,8 +85,8 @@ export const projects: Project[] = [
     category: 'Senior Project',
     summary: 'Unified data warehouse and API layer across 50+ accounting clients with automated reconciliation.',
     tech: [
-      'PostgreSQL', 'Supabase', 'REST APIs', 'Data Warehouse', 'Audit Trail',
-      'Schema Design', 'Data Orchestration', 'Encryption', 'Portal Integration', 'Monitoring'
+      'PostgreSQL', 'Supabase', 'REST APIs', 'RAG', 'Workflow Automation',
+      'Schema Design', 'Data Orchestration', 'SOC II Compliance', 'ODBC', 'RPA'
     ],
     problem: 'Disparate client systems and formats led to inconsistent reporting and manual reconciliation.',
     solution: 'Designed a star-schema warehouse, ETL pipelines, and reconciliation engine with role-based security.',
@@ -110,14 +110,14 @@ export const projects: Project[] = [
   // Club Leadership (SOC)
   {
     id: 'soc-tesla-ops',
-    title: 'Tesla Valet Operations Optimization',
-    company: 'SOC — Analyst',
+    title: 'Valet Operations Optimization',
+    company: 'SOC — Analyst (Tesla)',
     date: 'Jan 2025 – Jun 2025',
     category: 'Club Leadership',
     summary: 'SOC project improving valet operations using low-code apps, dashboards, and process redesign.',
     tech: [
       'PowerApps', 'SharePoint', 'Power BI', 'Dispatch Logic', 'KPI Design',
-      'CAPEX/OPEX Modeling', 'Process Mapping', 'Forecasting', 'Time Study', 'Documentation'
+      'CAPEX/OPEX Modeling', 'Process Mapping', 'Forecasting', 'Project Pitching', 'Sensitivity Analysis'
     ],
     problem: 'Improve vehicle routing and staffing for multi-location service centers.',
     solution: 'Led analysis and app/dashboard build; modeled costs and throughput to guide decisions.',
@@ -168,8 +168,8 @@ export const projects: Project[] = [
     category: 'Club Leadership',
     summary: 'Production efficiency and quality system improvements for scaling from prototype to volume.',
     tech: [
-      'Quality Management System', 'Test Protocols', 'Process Standardization', 'Fixture Design', 'Layout Optimization',
-      'Documentation', 'Safety Improvements', 'Readiness for Scale', 'Training Materials', 'Continuous Improvement'
+      'SOP', 'Test Protocols', 'Process Standardization', 'Fixture Design', 'Layout Optimization',
+      'SolidWorks', 'Noise Cancellation', 'Theory of Constraints', 'Training Materials', 'Continuous Improvement'
     ],
     problem: 'Scaling from prototype to volume production under quality and supply constraints.',
     solution: 'Requirements, modular system design, quality framework, and supply risk assessment.',
@@ -302,26 +302,26 @@ export const projects: Project[] = [
     ],
   },
 
-  // Research (Aerospace)
+  // Research (Environmental Engineering)
   {
     id: 'westt-research',
-    title: 'WESTT: Aerospace Systems Study',
-    company: 'Cal Poly — WESTT',
+    title: 'WESTT: Environmental Engineering Research',
+    company: 'Cal Poly Environmental Engineering Dept.',
     date: 'Sep 2022 – Dec 2023',
     category: 'Research',
-    summary: 'Research initiative exploring aerospace systems and testing methodologies.',
+    summary: 'Bioremediation algae research: sterile sampling, lab protocol adherence, experiment logging, and QA support.',
     tech: [
-      'Systems Engineering', 'Test Planning', 'Data Collection', 'Analysis Methods', 'Protocol Design',
-      'Lab Procedures', 'Safety Practices', 'Documentation', 'Results Synthesis', 'Presentation'
+      'Environmental Sampling', 'Sterile Technique', 'Biotoxicity Assays', 'Lab Protocols', 'Sample Preservation',
+      'Data Logging', 'QA Review', 'Safety Practices', 'Report Documentation', 'Process Standardization'
     ],
-    problem: 'Investigate system performance and reliability under varying conditions.',
-    solution: 'Defined test protocols and synthesized findings across experiments.',
+    problem: 'Investigate algae-based bioremediation performance and lab process reliability.',
+    solution: 'Executed sampling and lab workflows, logged variables, and supported QA and standardization.',
     implementation: [
-      'Test planning and data collection',
-      'Analysis of system behaviors'
+      'Field collection and chain of custody',
+      'Controlled lab runs with variable tracking'
     ],
     outcomes: [
-      'Consolidated insights to inform future research'
+      'Consistent, reproducible lab workflows supporting future trials'
     ],
   },
 ] 
