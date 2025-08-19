@@ -30,7 +30,7 @@ export default function Projects() {
               : 'mt-4 grid grid-cols-1 sm:grid-cols-2 gap-5'
             }>
               {group.items.map(p => (
-                <div key={p.id} className="h-[360px] sm:h-[340px]">
+                <div key={p.id} className="h-[400px] sm:h-[380px]">
                   <ProjectCard project={p} />
                 </div>
               ))}

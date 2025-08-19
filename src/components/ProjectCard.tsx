@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="flip-card h-full" onClick={() => setFlipped(v => !v)}>
       <div className={`flip-inner h-full ${flipped ? 'is-flipped' : ''}`}>
-        <div className="flip-front bg-surface/80 border border-white/20 rounded-lg p-5 flex flex-col">
+        <div className="flip-front bg-surface/80 border border-white/20 rounded-lg p-5 flex flex-col overflow-y-auto">
           <div className="flex items-start justify-between">
             <div className="text-xs uppercase tracking-wide text-gray-400">{project.category}</div>
             {project.logo && (
