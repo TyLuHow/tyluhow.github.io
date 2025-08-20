@@ -18,8 +18,15 @@ export type Project = {
   logo?: { src: string; alt: string }
 }
 
+function trim(text: string, max = 140): string {
+  return text.length > max ? text.slice(0, max - 1) + '…' : text
+}
+
 export default function ProjectCard({ project }: { project: Project }) {
   const [flipped, setFlipped] = useState(false)
+
+  const topOutcomes = project.outcomes.slice(0, 2)
+  const topImpl = project.implementation.slice(0, 2)
 
   return (
     <div className="flip-card h-full" onClick={() => setFlipped(v => !v)}>
@@ -61,7 +68,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             View details
           </button>
         </div>
-        <div className="flip-back bg-surface/90 border border-white/20 rounded-lg p-5 overflow-y-auto">
+        <div className="flip-back bg-surface/90 border border-white/20 rounded-lg p-5">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-lg font-semibold text-white">{project.title}</h3>
@@ -85,38 +92,26 @@ export default function ProjectCard({ project }: { project: Project }) {
           <div className="mt-3 space-y-3 text-gray-300 text-sm">
             <div>
               <div className="font-medium text-gray-200">Problem</div>
-              <ul className="list-disc list-inside"><li>{project.problem}</li></ul>
+              <p>{trim(project.problem)}</p>
             </div>
             <div>
               <div className="font-medium text-gray-200">Solution</div>
-              <ul className="list-disc list-inside"><li>{project.solution}</li></ul>
+              <p>{trim(project.solution)}</p>
             </div>
-            <div>
-              <div className="font-medium text-gray-200">Technical implementation</div>
-              <ul className="list-disc list-inside space-y-1">
-                {project.implementation.map((i, idx) => (<li key={idx}>{i}</li>))}
-              </ul>
-            </div>
-            <div>
-              <div className="font-medium text-gray-200">Outcomes</div>
-              <ul className="list-disc list-inside space-y-1">
-                {project.outcomes.map((o, idx) => (<li key={idx}>{o}</li>))}
-              </ul>
-            </div>
-            {project.media && project.media.length > 0 && (
+            {topImpl.length > 0 && (
               <div>
-                <div className="font-medium text-gray-200">Media</div>
-                <div className="space-y-3">
-                  {project.media.map((m, idx) => (
-                    <div key={idx} className="space-y-2">
-                      {m.type === 'pdf' ? (
-                        <iframe src={m.url} title={m.label} className="w-full h-64 rounded border border-white/10" />
-                      ) : (
-                        <a href={m.url} target="_blank" rel="noreferrer" className="underline hover:text-white">{m.label}</a>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                <div className="font-medium text-gray-200">Technical</div>
+                <ul className="list-disc list-inside space-y-1">
+                  {topImpl.map((i, idx) => (<li key={idx}>{trim(i, 110)}</li>))}
+                </ul>
+              </div>
+            )}
+            {topOutcomes.length > 0 && (
+              <div>
+                <div className="font-medium text-gray-200">Outcomes</div>
+                <ul className="list-disc list-inside space-y-1">
+                  {topOutcomes.map((o, idx) => (<li key={idx}>{trim(o, 110)}</li>))}
+                </ul>
               </div>
             )}
           </div>
