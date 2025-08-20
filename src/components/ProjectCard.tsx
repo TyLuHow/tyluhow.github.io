@@ -13,6 +13,7 @@ export type Project = {
   implementation: string[]
   outcomes: string[]
   highlights?: string[]
+  impact?: string
   media?: { label: string; url: string; type?: 'link' | 'pdf' }[]
   logo?: { src: string; alt: string }
 }
@@ -43,13 +44,15 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.date && (
             <div className="text-xs text-gray-500">{project.date}</div>
           )}
-          <p className="mt-2 text-gray-300 flex-1">{project.summary}</p>
-          {project.highlights && project.highlights.length > 0 && (
-            <ul className="mt-3 text-gray-200 text-sm space-y-1">
-              {project.highlights.map((h, idx) => (<li key={idx}>• {h}</li>))}
-            </ul>
+          <p className="mt-2 text-gray-300">{project.summary}</p>
+
+          {project.category === 'Internship' && project.impact && (
+            <div className="mt-6 text-2xl sm:text-3xl font-semibold text-[color:var(--tw-prose-body)]">
+              <span className="text-accent">{project.impact}</span>
+            </div>
           )}
-          <div className="mt-3 flex flex-wrap gap-2">
+
+          <div className="mt-4 flex flex-wrap gap-2">
             {project.tech.map(t => (
               <span key={t} className="text-xs tag-pill">{t}</span>
             ))}

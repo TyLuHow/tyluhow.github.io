@@ -13,6 +13,7 @@ export const projects: Project[] = [
       'Python', 'Databricks', 'Hex', 'SAP HANA', 'Predictive Analytics',
       'MCP Integration', 'ETL Pipelines', 'Risk Scoring', 'Dashboard Design', 'Cursor'
     ],
+    impact: 'Up to $2.3M cost avoidance; 72-hour early warnings',
     problem: 'Limited visibility into disruption risks across a complex multi-tier supplier network.',
     solution: 'Built predictive risk models, network analysis, and live dashboards to enable proactive mitigation.',
     implementation: [
@@ -37,6 +38,7 @@ export const projects: Project[] = [
       'Power BI', 'DAX', 'PowerApps', 'Power Automate', 'T-SQL',
       'Python', 'Power Query', 'Data Governance', 'KPI Design', 'Report Design'
     ],
+    impact: '40% incident reduction post-deployment',
     problem: 'Manual incident tracking across 5 departments with no predictive capabilities or unified reporting.',
     solution: 'Integrated multi-source safety data and built predictive analytics with interactive dashboards and alerts.',
     implementation: [
@@ -62,6 +64,7 @@ export const projects: Project[] = [
       'Allen-Bradley ControlLogix', 'Ladder Logic', 'HMI Development', 'FactoryTalk View', 'EtherNet/IP',
       'Alarm Management (ISA-18.2)', 'Commissioning', 'Network Config', 'Tech Writing', 'Troubleshooting'
     ],
+    impact: '25% reduction in commissioning time',
     problem: 'Need for standardized, reliable control systems with safety and compliance across sites.',
     solution: 'Designed alarm philosophy, P&ID-based HMI, historian, and automated reporting.',
     implementation: [
@@ -266,7 +269,7 @@ export const projects: Project[] = [
     problem: 'Assess material properties and viability of fungi-based composites in architecture.',
     solution: 'Quantitative analysis of performance, environmental impact, and cost at scale.',
     implementation: [
-      'Analysis of tensile, compression, and thermal properties',
+      'Analysis of tensile, compensation, and thermal properties',
       'Life cycle assessment and economic modeling',
       'Applications from acoustic panels to structural elements'
     ],
@@ -290,6 +293,7 @@ export const projects: Project[] = [
       'Social Analytics', 'Content Strategy', 'A/B Testing', 'Engagement Modeling', 'Salesforce Integration',
       'Dashboarding', 'Audience Segmentation', 'Campaign Design', 'KPI Tracking', 'Reporting'
     ],
+    impact: '43% follower growth in 70 days',
     problem: 'Limited social presence hindered lead generation and brand awareness.',
     solution: 'Built analytics pipeline, A/B testing, and targeted content strategies.',
     implementation: [
