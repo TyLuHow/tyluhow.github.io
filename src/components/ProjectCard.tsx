@@ -18,7 +18,7 @@ export type Project = {
   logo?: { src: string; alt: string }
 }
 
-function trim(text: string, max = 140): string {
+function trim(text: string, max = 180): string {
   return text.length > max ? text.slice(0, max - 1) + '…' : text
 }
 
@@ -51,15 +51,9 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.date && (
             <div className="text-xs text-gray-500">{project.date}</div>
           )}
-          <p className="mt-2 text-gray-300">{project.summary}</p>
+          <p className="mt-2 text-gray-300">{trim(project.summary)}</p>
 
-          {project.impact && (
-            <div className="mt-5 text-2xl sm:text-3xl font-semibold text-accent">
-              {project.impact}
-            </div>
-          )}
-
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2 max-h-16 overflow-hidden">
             {project.tech.map(t => (
               <span key={t} className="text-xs tag-pill">{t}</span>
             ))}
