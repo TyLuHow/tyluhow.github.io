@@ -46,9 +46,9 @@ export default function ProjectCard({ project }: { project: Project }) {
           )}
           <p className="mt-2 text-gray-300">{project.summary}</p>
 
-          {project.category === 'Internship' && project.impact && (
-            <div className="mt-6 text-2xl sm:text-3xl font-semibold text-[color:var(--tw-prose-body)]">
-              <span className="text-accent">{project.impact}</span>
+          {project.impact && (
+            <div className="mt-5 text-2xl sm:text-3xl font-semibold text-accent">
+              {project.impact}
             </div>
           )}
 
