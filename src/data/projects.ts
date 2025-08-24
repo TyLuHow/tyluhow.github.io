@@ -13,7 +13,8 @@ export const projects: Project[] = [
       'Python', 'Databricks', 'Hex', 'SAP HANA', 'Predictive Analytics',
       'MCP Integration', 'ETL Pipelines', 'Risk Scoring', 'Dashboard Design', 'Cursor'
     ],
-    impact: 'Up to $2.3M cost avoidance; 72-hour early warnings',
+    impactValue: '$2.3M',
+    impactLabel: 'cost avoidance',
     problem: 'Limited visibility into disruption risks across a complex multi-tier supplier network.',
     solution: 'Built predictive risk models, network analysis, and live dashboards to enable proactive mitigation.',
     implementation: [
@@ -38,7 +39,8 @@ export const projects: Project[] = [
       'Power BI', 'DAX', 'PowerApps', 'Power Automate', 'T-SQL',
       'Python', 'Power Query', 'Data Governance', 'KPI Design', 'Report Design'
     ],
-    impact: '40% incident reduction post-deployment',
+    impactValue: '40%',
+    impactLabel: 'incident reduction',
     problem: 'Manual incident tracking across 5 departments with no predictive capabilities or unified reporting.',
     solution: 'Integrated multi-source safety data and built predictive analytics with interactive dashboards and alerts.',
     implementation: [
@@ -64,7 +66,8 @@ export const projects: Project[] = [
       'Allen-Bradley ControlLogix', 'Ladder Logic', 'HMI Development', 'FactoryTalk View', 'EtherNet/IP',
       'Alarm Management (ISA-18.2)', 'Commissioning', 'Network Config', 'Tech Writing', 'Troubleshooting'
     ],
-    impact: '25% reduction in commissioning time',
+    impactValue: '25%',
+    impactLabel: 'commissioning reduction',
     problem: 'Need for standardized, reliable control systems with safety and compliance across sites.',
     solution: 'Designed alarm philosophy, P&ID-based HMI, historian, and automated reporting.',
     implementation: [
@@ -91,6 +94,8 @@ export const projects: Project[] = [
       'PostgreSQL', 'Supabase', 'REST APIs', 'RAG', 'Workflow Automation',
       'Schema Design', 'Data Orchestration', 'SOC II Compliance', 'ODBC', 'RPA'
     ],
+    impactValue: '1→5 days',
+    impactLabel: 'monthly close',
     problem: 'Disparate client systems and formats led to inconsistent reporting and manual reconciliation.',
     solution: 'Designed a star-schema warehouse, ETL pipelines, and reconciliation engine with role-based security.',
     implementation: [
@@ -122,6 +127,8 @@ export const projects: Project[] = [
       'PowerApps', 'SharePoint', 'Power BI', 'Dispatch Logic', 'KPI Design',
       'CAPEX/OPEX Modeling', 'Process Mapping', 'Forecasting', 'Project Pitching', 'Sensitivity Analysis'
     ],
+    impactValue: '369%',
+    impactLabel: 'ROI (50-day breakeven)',
     problem: 'Improve vehicle routing and staffing for multi-location service centers.',
     solution: 'Led analysis and app/dashboard build; modeled costs and throughput to guide decisions.',
     implementation: [
@@ -149,6 +156,8 @@ export const projects: Project[] = [
       'Simulation Modeling', 'HACCP', 'Layout Design', 'Time Study', 'Throughput Analysis',
       'Financial Modeling', 'Traceability', 'Regulatory Compliance', 'Vendor Sourcing', 'Ergonomics'
     ],
+    impactValue: '80%',
+    impactLabel: 'productivity improvement',
     problem: 'Scale from 50 to 500 gallons/week while ensuring quality and safety.',
     solution: 'Designed facility layout, quality system, and scheduling optimization.',
     implementation: [
@@ -174,6 +183,8 @@ export const projects: Project[] = [
       'SOP', 'Test Protocols', 'Process Standardization', 'Fixture Design', 'Layout Optimization',
       'SolidWorks', 'Noise Cancellation', 'Theory of Constraints', 'Training Materials', 'Continuous Improvement'
     ],
+    impactValue: 'Ready for scale',
+    impactLabel: 'process consistency',
     problem: 'Scaling from prototype to volume production under quality and supply constraints.',
     solution: 'Requirements, modular system design, quality framework, and supply risk assessment.',
     implementation: [
@@ -198,6 +209,8 @@ export const projects: Project[] = [
       'Process Mapping', 'Time Study', 'Bottleneck Analysis', '5S', 'Layout Planning',
       'WIP Management', 'FIFO', 'KPI Tracking', 'Visio Diagrams', 'ROI Modeling'
     ],
+    impactValue: 'VSM',
+    impactLabel: 'bottlenecks resolved',
     problem: 'Identify throughput and fulfillment bottlenecks.',
     solution: 'Mapped current state, identified constraints, proposed improvements.',
     implementation: [
@@ -219,6 +232,8 @@ export const projects: Project[] = [
       'Recommendation Systems', 'A/B Testing', 'Experimentation Platform', 'Big Data Architecture', 'Cloud Cost Analysis',
       'Personalization Algorithms', 'Data Pipeline Design', 'Financial Modeling', 'Strategic Analysis', 'User Behavior Analytics'
     ],
+    impactValue: '50+ pages',
+    impactLabel: 'report delivered',
     problem: 'Understand drivers of value creation and tech infrastructure at Netflix.',
     solution: 'Comprehensive analysis of recommendation systems, big data stack, experimentation, and ROI.',
     implementation: [
@@ -244,6 +259,8 @@ export const projects: Project[] = [
       'Python', 'pandas', 'Data Cleaning', 'Geospatial Analysis', 'Folium',
       'Interactive Dashboards', 'ANOVA', 'Regression', 'Visualization', 'Tableau'
     ],
+    impactValue: '50k+',
+    impactLabel: 'records analyzed',
     problem: 'Derive insights from 50k+ species records to understand diversity patterns across parks.',
     solution: 'Built statistical models, interactive maps, and dashboards to explore biodiversity signals.',
     implementation: [
@@ -266,6 +283,8 @@ export const projects: Project[] = [
       'Materials Analysis', 'Sustainability Metrics', 'Life Cycle Assessment', 'Economic Modeling', 'Performance Testing',
       'Thermal/Mechanical Properties', 'Research Synthesis', 'Report Writing', 'Environmental Impact', 'Applications Review'
     ],
+    impactValue: '70%',
+    impactLabel: 'CO₂ reduction vs baseline',
     problem: 'Assess material properties and viability of fungi-based composites in architecture.',
     solution: 'Quantitative analysis of performance, environmental impact, and cost at scale.',
     implementation: [
@@ -293,7 +312,8 @@ export const projects: Project[] = [
       'Social Analytics', 'Content Strategy', 'A/B Testing', 'Engagement Modeling', 'Salesforce Integration',
       'Dashboarding', 'Audience Segmentation', 'Campaign Design', 'KPI Tracking', 'Reporting'
     ],
-    impact: '43% follower growth in 70 days',
+    impactValue: '43%',
+    impactLabel: 'follower growth (70 days)',
     problem: 'Limited social presence hindered lead generation and brand awareness.',
     solution: 'Built analytics pipeline, A/B testing, and targeted content strategies.',
     implementation: [
@@ -318,6 +338,8 @@ export const projects: Project[] = [
       'Environmental Sampling', 'Sterile Technique', 'Biotoxicity Assays', 'Lab Protocols', 'Sample Preservation',
       'Data Logging', 'QA Review', 'Safety Practices', 'Report Documentation', 'Process Standardization'
     ],
+    impactValue: 'Reproducible',
+    impactLabel: 'lab workflows',
     problem: 'Investigate algae-based bioremediation performance and lab process reliability.',
     solution: 'Executed sampling and lab workflows, logged variables, and supported QA and standardization.',
     implementation: [

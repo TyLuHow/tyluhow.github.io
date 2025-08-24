@@ -14,6 +14,8 @@ export type Project = {
   outcomes: string[]
   highlights?: string[]
   impact?: string
+  impactValue?: string
+  impactLabel?: string
   media?: { label: string; url: string; type?: 'link' | 'pdf' }[]
   logo?: { src: string; alt: string }
 }
@@ -31,7 +33,8 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="flip-card h-full" onClick={() => setFlipped(v => !v)}>
       <div className={`flip-inner h-full ${flipped ? 'is-flipped' : ''}`}>
-        <div className="flip-front bg-surface/80 border border-white/20 rounded-lg p-5 flex flex-col">
+        {/* FRONT */}
+        <div className="flip-front bg-surface/80 border border-white/20 rounded-lg p-5 flex h-full flex-col">
           <div className="flex items-start justify-between">
             <div className="text-xs uppercase tracking-wide text-gray-400">{project.category}</div>
             {project.logo && (
@@ -51,18 +54,33 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.date && (
             <div className="text-xs text-gray-500">{project.date}</div>
           )}
-          <p className="mt-2 text-gray-300">{trim(project.summary)}</p>
 
-          <div className="mt-4 flex flex-wrap gap-2 max-h-16 overflow-hidden">
-            {project.tech.map(t => (
-              <span key={t} className="text-xs tag-pill">{t}</span>
-            ))}
+          {/* Scrollable content */}
+          <div className="mt-2 flex-1 overflow-y-auto pr-1">
+            <p className="text-gray-300">{trim(project.summary)}</p>
+
+            {/* Compact stat row */}
+            {(project.impactValue || project.impactLabel) && (
+              <div className="mt-3 text-sm flex items-baseline gap-2">
+                {project.impactValue && <span className="text-accent font-semibold text-base">{project.impactValue}</span>}
+                {project.impactLabel && <span className="text-gray-400">{project.impactLabel}</span>}
+              </div>
+            )}
+
+            <div className="mt-4 flex flex-wrap gap-2 max-h-16 overflow-hidden">
+              {project.tech.map(t => (
+                <span key={t} className="text-xs tag-pill">{t}</span>
+              ))}
+            </div>
           </div>
-          <button className="mt-4 self-start text-sm btn-solid">
+
+          <button className="mt-4 shrink-0 self-start text-sm btn-solid">
             View details
           </button>
         </div>
-        <div className="flip-back bg-surface/90 border border-white/20 rounded-lg p-5">
+
+        {/* BACK */}
+        <div className="flip-back bg-surface/90 border border-white/20 rounded-lg p-5 flex h-full flex-col">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-lg font-semibold text-white">{project.title}</h3>
@@ -83,7 +101,9 @@ export default function ProjectCard({ project }: { project: Project }) {
               />
             )}
           </div>
-          <div className="mt-3 space-y-3 text-gray-300 text-sm">
+
+          {/* Scrollable content */}
+          <div className="mt-3 flex-1 overflow-y-auto pr-1 space-y-3 text-gray-300 text-sm">
             <div>
               <div className="font-medium text-gray-200">Problem</div>
               <p>{trim(project.problem)}</p>
@@ -109,7 +129,8 @@ export default function ProjectCard({ project }: { project: Project }) {
               </div>
             )}
           </div>
-          <button className="mt-4 text-sm btn-solid">
+
+          <button className="mt-4 shrink-0 text-sm btn-solid">
             Back
           </button>
         </div>
